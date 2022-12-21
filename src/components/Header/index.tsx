@@ -12,7 +12,6 @@ export const Header = () => {
             <img src={logoCompany} alt="back to home" />
           </figure>
         </a>
-
         <a href="">
           <img src={homeLogo} alt="back to home" />
         </a>
