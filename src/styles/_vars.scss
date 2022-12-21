@@ -1,5 +1,9 @@
 //colors
-
+@font-face {
+    font-family: 'MonsterClubhouse';
+    src: url('../assets/fonts/MonsterClubhouse.ttf')
+  }
+$--font:'MonsterClubhouse', sans-serif;
 $--red: #d84a4a;
 //gray
 $--gray--dark: #425966;

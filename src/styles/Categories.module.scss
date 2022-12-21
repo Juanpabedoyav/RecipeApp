@@ -4,7 +4,7 @@
   width: 100%;
   padding: 0 1.4rem;
   height: 200px;
-  margin-bottom: 1rem;
+  margin-top: -1.8rem;
 }
 
 .list-categories{
@@ -20,6 +20,11 @@ li{
     width: 114px;
     background: transparent linear-gradient(180deg, $--gray--light 0%, $--white 100%);
     box-shadow: 0px 5px 9px $--black-light;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+  
   }
 }
