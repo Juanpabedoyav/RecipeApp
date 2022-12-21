@@ -1,8 +1,11 @@
+@import 'vars';
+
+
 .Footer {
   width: 100%;
   height: 4.3rem;
-  background: transparent linear-gradient(180deg, #c2e3f3 0%, #6aa3c1 100%);
-  box-shadow: 4px 6px 23px #a9a9a911;
+  background: transparent linear-gradient(180deg, $--blue--light 0%, $--blue--mid 100%);
+  box-shadow: 4px 6px 23px $--black-mid;
   position: absolute;
   bottom: 0;
 }
@@ -19,7 +22,8 @@
     align-items: center;
     justify-content: center;
     .Partner {
-      font-size: 1.4rem;
+      font-family: $--font ;
+      font-size: $--xl;
     }
   }
 }

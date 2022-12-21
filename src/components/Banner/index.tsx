@@ -7,7 +7,7 @@ export const Banner = () => {
       <img src={banner} alt="banner recipeApp" loading="lazy" />
       <div className={styles.Presentation}>
         <p>Recetas</p>
-        <p>Para todos</p>
+        <p>para todos</p>
       </div>
     </div>
   );
