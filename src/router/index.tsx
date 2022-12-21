@@ -1,6 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import AppContext from "../Context/AppContext";
-import useGetData from "../Hooks/useGetData";
+import { Header } from "components/Header";
+import AppContext from "context/AppContext";
+import useGetData from "hooks/useGetData";
+import { Home } from "container/Home";
 
 export const AppRouter = () => {
 const data = useGetData('https://api.spoonacular.com/recipes/complexSearch?apiKey=6439f97c50ed47cfaffd620b73f4b898')
@@ -9,12 +11,10 @@ const data = useGetData('https://api.spoonacular.com/recipes/complexSearch?apiKe
     return (
       <>
       <AppContext.Provider value={data}>
-
-        <BrowserRouter>
+        <Header />
+         <BrowserRouter>
           <Routes>
-              <Route path="/" />
-             
-  
+              <Route path="/" element={<Home/>}/>
           </Routes>
         </BrowserRouter>
       </AppContext.Provider>
