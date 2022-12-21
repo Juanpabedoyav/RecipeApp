@@ -1,9 +1,11 @@
 //colors
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 @font-face {
     font-family: 'MonsterClubhouse';
     src: url('../assets/fonts/MonsterClubhouse.ttf')
   }
 $--font:'MonsterClubhouse', sans-serif;
+$--font-p: 'Poppins', sans-serif; 
 $--red: #d84a4a;
 //gray
 $--gray--dark: #425966;

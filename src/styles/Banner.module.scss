@@ -15,8 +15,21 @@
   //add values according to globals vars
   color: $--white;
   position: absolute;
-  left: 10%;
+  left: 12%;
   bottom: 30%;
   font-size: $--xxl;
+  display: flex;
+  flex-direction: column;
+  p:nth-child(1){
+    font-family: $--font-p;
+    font-size: $--xxl;
+    margin-bottom: -2rem;
+  }
+  p:nth-child(2){
+    font-family: $--font;
+    font-size: $--xxl;
+    letter-spacing: 0px;
+    
+  }
 }
 }
