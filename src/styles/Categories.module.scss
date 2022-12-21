@@ -1,5 +1,5 @@
 //change to others breakpoints
-
+@import 'vars';
 .Categories{
   width: 100%;
   padding: 0 1.4rem;
@@ -12,14 +12,14 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-gap: 0.9rem;
-flex-direction: row;
+  gap: 0.9rem;
+  flex-direction: row;
 li{
     border-radius: 10px;
     height: 92px;
     width: 114px;
-    background: transparent linear-gradient(180deg, #E9F1FA 0%, #FFFFFF 100%);
-    box-shadow: 0px 5px 9px #8395A766;
+    background: transparent linear-gradient(180deg, $--gray--light 0%, $--white 100%);
+    box-shadow: 0px 5px 9px $--black-light;
 
   }
 }

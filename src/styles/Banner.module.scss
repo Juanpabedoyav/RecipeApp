@@ -1,4 +1,4 @@
-@import 'vars.scss';
+@import 'vars';
 //change to others breakpoints
 
 .Banner {
@@ -12,10 +12,10 @@
   }
 .Presentation{
   //add values according to globals vars
-  color: white;
+  color: $--white;
   position: absolute;
   left: 10%;
   bottom: 30%;
-  font-size: 3.3rem;
+  font-size: $--xxl;
 }
 }
