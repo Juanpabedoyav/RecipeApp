@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styles from 'styles/Header.module.scss'
 
 export const Header = () => {
@@ -5,7 +6,12 @@ export const Header = () => {
     <header className={styles.Header}>
         <nav>
             <ul>
-                <li></li>
+                <li>
+                  <img src="" alt="" />
+                </li>
+                <li>
+                  <Link to={'/'}/>
+                </li>
             </ul>
         </nav>
         
