@@ -1,6 +1,42 @@
+import styles from "styles/Card.module.scss";
 
 export const Recipes = () => {
   return (
-    <div>index</div>
+    <>
+      <h1 className={styles['recipes-title']}>Nuevas Recetas</h1>
+      <section className={styles['card-list']}>
+        <div className={styles.Card}>
+
+        </div>
+        <div className={styles.Card}>
+
+        </div>
+        <div className={styles.Card}>
+
+        </div>
+        <div className={styles.Card}>
+
+        </div>
+        <div className={styles.Card}>
+
+        </div>
+        <div className={styles.Card}>
+
+</div>
+<div className={styles.Card}>
+
+</div>
+<div className={styles.Card}>
+
+</div>
+<div className={styles.Card}>
+
+</div>
+<div className={styles.Card}>
+
+</div>
+      </section>
+
+    </>
   )
 }

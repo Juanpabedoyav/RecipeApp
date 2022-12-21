@@ -1,0 +1,37 @@
+@import 'vars';
+
+.recipes-title {
+    color: $--red;
+    font-size: $--xxl;
+    font-family: $--font;
+    text-align: center;
+    margin: 1.8rem auto;
+}
+
+.card-list {
+    width: 92%;
+    height: 218px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    gap: 1.5rem;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+            display: none;
+        }
+ 
+
+    .Card {
+        height: 182px;
+        width: 180px;
+    background: transparent linear-gradient(180deg, $--gray--light 0%, $--white 100%);
+    box-shadow: 0px 5px 9px $--black-light;
+    border-radius: 10px;
+
+
+    }
+}
