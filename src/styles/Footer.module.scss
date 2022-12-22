@@ -32,10 +32,32 @@
 .footer-img {
   width: 228px;
   position: relative;
-  height: 6.2rem;
+  height:105px;
   img {
     width: 100%;
     height: 100%;
+  }
+}
+@media screen and (min-width: $--mid-bp) {
+  .footer-list {
+    justify-content: flex-end;
+    gap: 1rem;
+      li {
+
+      .Partner {
+        font-size: 2.4rem;
+      }
+    }
+  
+  }
+  .footer-img {
+    width: 378px;
+    height: 167px;
+    margin-right:60px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 @media screen and (min-width: $--lg-bp) {
@@ -43,21 +65,19 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-right:4rem;
     margin-left: 10rem;
     li {
 
       .Partner {
         font-family: $--font ;
-        font-size: $--xxl;
+        font-size: 3.5rem;
       }
     }
   
   }
   .footer-img {
-    width: 228px;
-    position: relative;
-    height: 6.2rem;
+    width: 535px;
+    height: 248px;
     img {
       width: 100%;
       height: 100%;

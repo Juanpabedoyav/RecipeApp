@@ -12,6 +12,8 @@
   height: 315px;
   margin: 0 auto;
   padding: 2.4rem 0;
+  padding-right: 1.5rem;
+  padding-left: 1.3rem;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -122,7 +124,9 @@
     margin-left: 4rem;
   }
   .card-list {
-    margin-left: 4rem;
+  padding-right: 1.8rem;
+  height: 360px;
+
      
   }
 }
@@ -132,8 +136,7 @@
     font-size: 4.1rem;
   }
   .card-list {
-    height: 385px;
-    
+    height: 430px;
     margin: 0 4rem;
     display: flex;
     flex-direction: row;
