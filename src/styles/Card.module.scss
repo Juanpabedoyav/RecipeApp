@@ -123,3 +123,29 @@
      
   }
 }
+
+@media screen and (min-width: $--lg-bp) {
+  .recipes-title {
+    font-size: 4.1rem;
+  }
+  .card-list {
+    height: 385px;
+    
+    margin: 0 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;   
+    .Card{
+      width: 266px;
+      height: 269px;
+      .card-detail {
+        
+        img {
+          margin-top: -2.5rem;
+          width: 166px;
+          height: 157px;
+        }
+      }
+    }
+  }
+}
