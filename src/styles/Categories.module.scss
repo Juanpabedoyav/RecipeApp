@@ -44,3 +44,10 @@ li{
     }
 
 }
+
+@media screen and (min-width: $--lg-bp){
+  .Categories{
+  display: none;
+
+  }
+}

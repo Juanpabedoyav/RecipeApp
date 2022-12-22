@@ -12,8 +12,9 @@
 .footer-list {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-
+  justify-content: space-between;
+  margin-left: 1.4rem;
+  margin-right: 0.5rem ;
   li {
     list-style: none;
     height: 4.3rem;
