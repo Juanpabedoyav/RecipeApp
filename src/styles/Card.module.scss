@@ -39,7 +39,10 @@
       height: 332px;
       cursor: pointer;
     }
-
+ &:active {
+      height: 332px;
+      cursor: pointer;
+    }
     .card-detail {
       display: flex;
       flex-direction: column;
