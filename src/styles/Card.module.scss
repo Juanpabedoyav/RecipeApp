@@ -9,14 +9,16 @@
 }
 .card-list {
   width: 92%;
-  height: 280px;
+  height: 315px;
   margin: 0 auto;
   padding: 2.4rem 0;
+  padding-right: 1.5rem;
+  padding-left: 1.3rem;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  overflow-x: scroll;
+  overflow-y: hidden;
   gap: 1.5rem;
 
   &::-webkit-scrollbar {
@@ -30,15 +32,14 @@
       linear-gradient(180deg, $--gray--light 0%, $--white 100%);
     box-shadow: 0px 5px 9px $--black-light;
     border-radius: 10px;
-    opacity: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    &:hover  {
-    height: 332px;
+    &:hover {
+      height: 332px;
       cursor: pointer;
-  }
-  
+    }
+
     .card-detail {
       display: flex;
       flex-direction: column;
@@ -77,7 +78,7 @@
       }
     }
   }
- 
+
   .card-detail--hover {
     display: flex;
     flex-direction: column;
@@ -89,6 +90,9 @@
       flex-direction: column;
       align-items: center;
       .card-description--hover {
+        img{
+          margin-top: 9px;
+        }
         list-style: none;
         display: flex;
         flex-direction: column;
@@ -98,7 +102,6 @@
           font-size: $--sm;
           color: $--red;
           margin-top: 0.2rem;
-
         }
         span {
           font-size: $--s;
@@ -106,7 +109,6 @@
           font-weight: 400;
           margin-bottom: 0.2rem;
           margin-top: -0.4rem;
-
         }
       }
       // p:nth-child(2){
@@ -116,3 +118,76 @@
   }
 }
 
+@media screen and (min-width: $--mid-bp) {
+  .recipes-title {
+    text-align: left;
+    margin-left: 4rem;
+  }
+  .card-list {
+  padding-right: 1.8rem;
+  height: 360px;
+
+     
+  }
+}
+
+@media screen and (min-width: $--lg-bp) {
+  .recipes-title {
+    font-size: 4.1rem;
+  }
+  .card-list {
+    height: 430px;
+    margin: 0 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;   
+    flex-wrap: nowrap;
+
+
+    .Card{
+      position: relative;
+      justify-content: normal;
+      width: 266px;
+      height: 269px;
+      .card-detail {
+      
+          p{
+            font-size: 1.8rem;
+          }
+
+          img {
+          margin-top: -2.5rem;
+          width: 166px;
+          height: 157px;
+        }
+      }
+      .Icons {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      }
+    }
+  }
+  .card-detail--hover {
+    .card-list--hover {
+      padding-top: 9px;
+      padding-bottom: 19px;
+      .card-description--hover {
+        .card--option {
+          margin-top: 0.5rem;
+          font-size: $--sm;
+        }
+        span {
+          font-size: $--s;
+          font-family: $--font-p;
+          font-weight: 400;
+          margin-bottom: 0.2rem;
+          margin-top: -0.4rem;
+        }
+      }
+      // p:nth-child(2){
+      //     margin-top: -0.4rem;
+      // }
+    }
+  }
+}

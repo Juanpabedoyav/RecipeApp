@@ -9,7 +9,7 @@ import { Cards } from "components/Cards";
 export const Recipes = () => {
   return (
     <>
-      <h1 className={styles['recipes-title']}>Nuevas Recetas</h1>
+       <h1 className={styles['recipes-title']}>Nuevas Recetas</h1>
       <section className={styles['card-list']}>
        
         <Cards title="Ojingeo" subtitle="Muchim" img={ojingeo5} rate={5.1}/>

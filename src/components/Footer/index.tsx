@@ -7,7 +7,7 @@ export const Footer = () => {
             <li>
                 <p className={styles.Partner}>Con el Patrocinio de</p>
             </li>
-            <li>
+            <li className={styles['footer-logo']}>
                <figure className={styles['footer-img']}>
                     <img src={footerLogo} alt="" />
                 </figure> 
