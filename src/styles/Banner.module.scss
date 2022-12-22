@@ -34,4 +34,19 @@
       left: 7.5rem;
     }
   }
+ 
+}
+@media screen and (min-width: $--lg-bp) {
+  .Banner {
+    height: 416px;
+    .Presentation {
+      left: 16rem;
+      p:nth-child(1) {
+        font-size: $--xxxl;
+      }
+      p:nth-child(2) {
+        font-size: $--xxxl;
+      }
+    }
+  }
 }

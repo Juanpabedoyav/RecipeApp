@@ -1,9 +1,12 @@
-@import 'vars';
+@import "vars";
 .Header {
   height: 4rem;
 }
 
 .Nav {
+  .Links {
+    display: none;
+  }
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -25,12 +28,37 @@
     text-decoration: none;
   }
 }
-@media screen and (min-width: $--mid-bp){
-  .Nav{
-  justify-content: space-between;
+@media screen and (min-width: $--mid-bp) {
+  .Nav {
+    justify-content: space-between;
     padding-right: 1.5rem;
     padding-left: 4rem;
-
   }
-
+}
+@media screen and (min-width: $--lg-bp) {
+  .Nav {
+    .Links {
+     display: flex;
+      .links-item {
+        margin: 0 2rem;
+        text-decoration: none;
+        color: $--gray--dark;
+        font-weight: 400;
+        font-size: $--sm;
+        &:hover{
+          color:$--red;
+          font-weight: 400;
+          font-size: $--sm;
+        }
+        &:active{
+          color:$--red;
+          font-weight: 400;
+        font-size: $--sm;
+        }
+      }
+    }
+  }
+  .icon-home {
+    display: none;
+  }
 }
