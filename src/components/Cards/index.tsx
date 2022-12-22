@@ -17,7 +17,6 @@ interface CardsProps {
 
 export const Cards = ({ title, subtitle, img, rate }: CardsProps) => {
     const [isHover, setIsHover] = useState<Boolean>(false);
-    const [isHoverDetail, setIsHoverDetail] = useState<string>();
 
     const handleMouseOver = () => {
         setIsHover(true);
