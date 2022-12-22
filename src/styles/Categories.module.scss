@@ -1,0 +1,34 @@
+//change to others breakpoints
+@import 'vars';
+.Categories{
+  width: 100%;
+  padding: 0 1.4rem;
+  height: 200px;
+  margin-top: -1.8rem;
+}
+
+.list-categories{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.9rem;
+  flex-direction: row;
+li{
+    border-radius: 10px;
+    height: 92px;
+    width: 114px;
+    background: transparent linear-gradient(180deg, $--gray--light 0%, $--white 100%);
+    box-shadow: 0px 5px 9px $--black-light;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+  h4{
+    font-family: $--font-p;
+    color: $--gray--dark;
+    font-size: $--sm;
+  }
+  }
+}

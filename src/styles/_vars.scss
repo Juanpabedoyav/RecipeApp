@@ -1,25 +1,34 @@
 //colors
-$--red: #D84A4A;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@font-face {
+    font-family: 'MonsterClubhouse';
+    src: url('../assets/fonts/MonsterClubhouse.ttf')
+  }
+$--font:'MonsterClubhouse', sans-serif;
+$--font-p: 'Poppins', sans-serif; 
+$--red: #d84a4a;
 //gray
-$--gray--dark:  #425966;
-$--gray--mid:#BFC4CAD1;
-$--gray--light : #E9F1FA;
+$--gray--dark: #425966;
+$--gray--mid: #bfc4cad1;
+$--gray--light: #e9f1fa;
 //blue
-$--blue--dark:  #0635C9;
-$--blue--mid:#6AA3C1;
-$--blue--light : #C2E3F3;
+$--blue--dark: #0635c9;
+$--blue--mid: #6aa3c1;
+$--blue--light: #c2e3f3;
 //white
-$--white: #FFFFFF;
+$--white: #ffffff;
 //black
 $--black: #00000000;
-$--black-mid: #A9A9A911;
+$--black-mid: #a9a9a911;
+$--black-light: #8395A766;
 //fonts
-$--sm: 0.8rem;
+$--s: 0.8rem;
+$--sm: 1rem;
 $--lg: 1.2rem;
 $--xl: 1.4rem;
-$--xxl: 3.3rem;
+$--xxl: 3.1rem;
 
 //breakpoints
-$--s-breakpoints: 428px;
-$--mid-breakpoints: 768px;
-$--lg-breakpoints: 1279px;
+$--s-bp: 428px;
+$--mid-bp: 768px;
+$--lg-bp: 1279px;
