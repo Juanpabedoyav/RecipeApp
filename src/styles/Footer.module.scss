@@ -3,7 +3,6 @@
 
 .Footer {
   width: 100%;
-  height: 4.3rem;
   background: transparent linear-gradient(180deg, $--blue--light 0%, $--blue--mid 100%);
   box-shadow: 4px 6px 23px $--black-mid;
   margin-top: 1.6rem;
@@ -13,6 +12,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   margin-left: 1.4rem;
   margin-right: 0.5rem ;
   li {
@@ -24,6 +24,7 @@
     .Partner {
       font-family: $--font ;
       font-size: $--xl;
+      color: $--gray--dark;
     }
   }
 }
@@ -35,5 +36,31 @@
   img {
     width: 100%;
     height: 100%;
+  }
+}
+@media screen and (min-width: $--lg-bp) {
+  .footer-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right:4rem;
+    margin-left: 10rem;
+    li {
+
+      .Partner {
+        font-family: $--font ;
+        font-size: $--xxl;
+      }
+    }
+  
+  }
+  .footer-img {
+    width: 228px;
+    position: relative;
+    height: 6.2rem;
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
 }

@@ -9,7 +9,7 @@
 }
 .card-list {
   width: 92%;
-  height: 280px;
+  height: 315px;
   margin: 0 auto;
   padding: 2.4rem 0;
   display: flex;
@@ -88,6 +88,9 @@
       flex-direction: column;
       align-items: center;
       .card-description--hover {
+        img{
+          margin-top: 9px;
+        }
         list-style: none;
         display: flex;
         flex-direction: column;
@@ -136,16 +139,49 @@
     flex-direction: row;
     justify-content: center;   
     .Card{
+      position: relative;
+      justify-content: normal;
       width: 266px;
       height: 269px;
       .card-detail {
-        
-        img {
+      
+          p{
+            font-size: 1.8rem;
+          }
+
+          img {
           margin-top: -2.5rem;
           width: 166px;
           height: 157px;
         }
       }
+      .Icons {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      }
+    }
+  }
+  .card-detail--hover {
+    .card-list--hover {
+      padding-top: 9px;
+      padding-bottom: 19px;
+      .card-description--hover {
+        .card--option {
+          margin-top: 0.5rem;
+          font-size: $--sm;
+        }
+        span {
+          font-size: $--s;
+          font-family: $--font-p;
+          font-weight: 400;
+          margin-bottom: 0.2rem;
+          margin-top: -0.4rem;
+        }
+      }
+      // p:nth-child(2){
+      //     margin-top: -0.4rem;
+      // }
     }
   }
 }
