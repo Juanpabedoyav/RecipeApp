@@ -25,6 +25,10 @@ li{
     align-items: center;
     justify-content: center;
     gap: 0.4rem;
-  
+  h4{
+    font-family: $--font-p;
+    color: $--gray--dark;
+    font-size: $--sm;
+  }
   }
 }
