@@ -32,3 +32,15 @@ li{
   }
   }
 }
+@media screen and (min-width: $--mid-bp){
+  .Categories{
+  height: 86px;
+
+  }
+  
+  .list-categories{
+    flex-wrap: nowrap;
+    margin-bottom: 2rem;
+    }
+
+}

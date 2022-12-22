@@ -1,3 +1,4 @@
+@import 'vars';
 .Header {
   height: 4rem;
 }
@@ -5,7 +6,9 @@
 .Nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  padding-right: 1.5rem;
+  padding-left: 4rem;
   align-items: center;
   height: 100%;
   figure {
@@ -21,4 +24,13 @@
   a {
     text-decoration: none;
   }
+}
+@media screen and (min-width: $--mid-bp){
+  .Nav{
+  justify-content: space-between;
+    padding-right: 1.5rem;
+    padding-left: 4rem;
+
+  }
+
 }
