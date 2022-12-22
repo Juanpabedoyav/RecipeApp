@@ -12,7 +12,16 @@ export const Header = () => {
             <img src={logoCompany} alt="back to home" />
           </figure>
         </a>
-        <a href="">
+        <div className={styles.Links}>
+          <a className={styles['links-item']} href="">Home</a>
+          <a className={styles['links-item']} href="">Vegetarianos</a>
+          <a className={styles['links-item']} href="">Platos Principales</a>
+          <a className={styles['links-item']} href="">Tortas</a>
+          <a className={styles['links-item']} href="">Rápida</a>
+          <a className={styles['links-item']} href="">Menú Niños</a>
+          <a className={styles['links-item']} href="">Sopas</a>
+        </div>
+        <a className={styles['icon-home']} href="">
           <img src={homeLogo} alt="back to home" />
         </a>
       </nav>
