@@ -34,7 +34,6 @@ export const Recipes = () => {
   const fetchInformationRecipe = async () => {
       const infoRecipe = await Promise.all(data.map((obj: HoverProps) => getData(obj.id)));
       setResults(infoRecipe);
-      console.log(results)
   };
 
   useEffect(() => {
