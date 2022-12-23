@@ -1,17 +1,43 @@
 import styles from "styles/Card.module.scss";
 import { Cards } from "components/Cards";
 import AppContext from "context/AppContext";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
+import axios from "axios";
+import { CardHover } from "components/CardHover";
 
 
-interface Recipe {
-  title: string
-  subtitle: string
+
+interface CardProps {
+  sourceName: string
   image: string
-  
+
 }
+interface HoverProps {
+  sourceName: string
+  image: string
+  id:number
+}
+const API_KEY = '52047e52f4024a94a714868302478f54';
+
 export const Recipes = () => {
   const data = useContext(AppContext)
+  const [results, setResults] = useState<any | null>();
+
+  const getData = async (id: number) => {
+      const response = await axios.get(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${API_KEY}`);
+      return response.data;
+  };
+
+  const fetchInformationRecipe = async () => {
+      const infoRecipe = await Promise.all(data.map((obj: HoverProps) => getData(obj.id)));
+      setResults(infoRecipe);
+      console.log(results)
+  };
+
+  useEffect(() => {
+      fetchInformationRecipe();
+
+  }, []);
 
   return (
     <>
@@ -19,9 +45,9 @@ export const Recipes = () => {
       <section className={styles['card-list']}>
         {
 
-          data.length > 0 ? data.map((plate: Recipe) => {
+              results.length > 0 ? results.map((plate: CardProps) => {
             return (
-              <Cards title={plate.title.substring(0, 8)} subtitle={plate.title.substring(8, plate.title.length)} img={plate.image} />
+              <Cards sourceName={plate.sourceName} image={plate.image} children={<CardHover/>}/>
 
             )
           })
