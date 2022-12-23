@@ -1,21 +1,17 @@
 import styles from "styles/Card.module.scss";
 import start from "assets/icons/ic_star.svg";
 import like from "assets/icons/ic-favorite.svg";
-import time from "assets/icons/ic_time.svg";
-import portion from "assets/icons/ic_portion.svg";
-import chef from "assets/icons/ic_chef.svg";
-
-
 import { useState } from "react";
 
 interface CardsProps {
     sourceName: string
+    dishTypes:[] | string
     image: string
     children: JSX.Element
 }
 
 
-export const Cards = ({ sourceName, image, children }: CardsProps) => {
+export const Cards = ({ sourceName, image, dishTypes, children }: CardsProps) => {
 
 
     const [isHover, setIsHover] = useState<Boolean>(false);
@@ -49,7 +45,7 @@ export const Cards = ({ sourceName, image, children }: CardsProps) => {
                         <>
                             <div className={styles["card-detail"]}>
                                 <p>
-                                    {sourceName} <small>{sourceName.substring(6, sourceName.length)}</small>
+                                    {sourceName} <small>{dishTypes}</small>
                                 </p>
                             </div>
                             <div className={styles.Icons}>

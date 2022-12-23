@@ -6,22 +6,23 @@ import axios from "axios";
 import { CardHover } from "components/CardHover";
 
 
+const API_KEY = 'bdf9815605054dda9c50ad9e7c02dab8';
 
 interface CardProps {
   sourceName: string
+  dishTypes:[] | string
   image: string
-
+  id?: number
 }
 interface HoverProps {
   sourceName: string
   image: string
   id:number
 }
-const API_KEY = '52047e52f4024a94a714868302478f54';
 
 export const Recipes = () => {
   const data = useContext(AppContext)
-  const [results, setResults] = useState<any | null>();
+  const [results, setResults] = useState<any | null >();
 
   const getData = async (id: number) => {
       const response = await axios.get(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${API_KEY}`);
@@ -45,9 +46,9 @@ export const Recipes = () => {
       <section className={styles['card-list']}>
         {
 
-              results.length > 0 ? results.map((plate: CardProps) => {
+              results?.length > 0 ? results.map((plate: CardProps) => {
             return (
-              <Cards sourceName={plate.sourceName} image={plate.image} children={<CardHover/>}/>
+              <Cards key={plate.id} sourceName={plate.sourceName} dishTypes={plate.dishTypes[0]} image={plate.image}  children={<CardHover/>}/>
 
             )
           })

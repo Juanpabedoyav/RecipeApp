@@ -3,8 +3,10 @@ import time from "assets/icons/ic_time.svg";
 import portion from "assets/icons/ic_portion.svg";
 import chef from "assets/icons/ic_chef.svg";
 
-
-export const CardHover = () => {
+interface CardHover{
+    
+}
+export const CardHover = ({}) => {
     return (
         <div className={styles["card-detail--hover"]}>
             <ul className={styles["card-list--hover"]}>
