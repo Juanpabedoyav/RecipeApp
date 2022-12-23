@@ -8,6 +8,7 @@ interface Recipe {
   title: string
   subtitle: string
   image: string
+  id?: string
 }
 export const Recipes = () => {
   const data = useContext(AppContext)
@@ -17,12 +18,14 @@ export const Recipes = () => {
       <h1 className={styles['recipes-title']}>Nuevas Recetas</h1>
       <section className={styles['card-list']}>
         {
-          data.map((plate: Recipe) => {
+
+          data.length > 0 ? data.map((plate: Recipe) => {
             return (
-              <Cards title={plate.title.substring(0, 8)} subtitle={plate.title.substring(8, plate.title.length)} img={plate.image} />
+              <Cards title={plate.title.substring(0, 8)} subtitle={plate.title.substring(8, plate.title.length)} img={plate.image} id={plate.id}/>
 
             )
           })
+            : 'Loading ...'
         }
       </section>
 

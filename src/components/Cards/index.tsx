@@ -6,21 +6,31 @@ import portion from "assets/icons/ic_portion.svg";
 import chef from "assets/icons/ic_chef.svg";
 
 
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { information } from "api/recipeInformation";
+import axios from "axios";
+import AppContext from "context/AppContext";
+import useGetData from "hooks/useGetData";
 
 interface CardsProps {
-    title: string;
-    subtitle: string;
-    img: string;
+    title: string
+    subtitle: string
+    img: string
+    id?: string
 }
 
-export const Cards = ({ title, subtitle, img }: CardsProps) => {
-
+const API_KEY = '0d0cb7c0f9b84805b5e91472c3db9a96';
+export const Cards = ({ title, subtitle, img, id }: CardsProps) => {
 
 
     const [isHover, setIsHover] = useState<Boolean>(false);
 
-    const handleMouseOver = () => {
+
+    const data = useGetData(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${API_KEY}`)
+    console.log(data)
+
+
+      const handleMouseOver = () => {
         setIsHover(true);
     };
     const handleMouseOut = () => {
