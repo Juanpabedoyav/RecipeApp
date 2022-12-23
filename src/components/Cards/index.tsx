@@ -12,10 +12,9 @@ interface CardsProps {
     title: string;
     subtitle: string;
     img: string;
-    rate: number;
 }
 
-export const Cards = ({ title, subtitle, img, rate }: CardsProps) => {
+export const Cards = ({ title, subtitle, img }: CardsProps) => {
 
 
 
@@ -72,7 +71,7 @@ export const Cards = ({ title, subtitle, img, rate }: CardsProps) => {
                             <div className={styles.Icons}>
                                 <div className={styles["icons-start"]}>
                                     <img src={start} alt="favorite start" />
-                                    <p>{rate}</p>
+                                    <p>5.1</p>
                                 </div>
                                 <img src={like} alt="like" />
                             </div>
