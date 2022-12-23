@@ -7,7 +7,7 @@ const useGetData = (API: string) => {
   useEffect(() => {
     async function fetchData(API: string) {
       try {
-    
+
         const response = await axios({
           method: 'get',
           url: API,
@@ -16,9 +16,11 @@ const useGetData = (API: string) => {
       } catch (error) {
         console.log(error)
       }
-     
+
     }
     fetchData(API);
+
+    return () => { }
   }, [API]);
 
 
