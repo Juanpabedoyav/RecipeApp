@@ -55,11 +55,13 @@
         height: 106px;
       }
       p {
-        font-size: $--xl;
+        // font-size: $--xl;
         color: $--red;
         font-family: $--font-p;
         font-weight: 500;
-
+        padding: 0 1.3rem;
+        padding-top: 0.7rem;
+        text-align: center;
         small {
           font-family: $--font;
           font-size: $--xl;

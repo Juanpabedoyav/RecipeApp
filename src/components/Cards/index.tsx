@@ -6,31 +6,52 @@ import portion from "assets/icons/ic_portion.svg";
 import chef from "assets/icons/ic_chef.svg";
 
 
-import { useContext, useEffect, useState } from "react";
-import { information } from "api/recipeInformation";
-import axios from "axios";
+import { SetStateAction, useContext, useEffect, useState } from "react";
 import AppContext from "context/AppContext";
 import useGetData from "hooks/useGetData";
+import axios from "axios";
 
 interface CardsProps {
     title: string
     subtitle: string
     img: string
-    id?: string
+
+}
+interface HoverProps {
+    title: string
+    subtitle: string
+    img: string
+    id: number
+
 }
 
-const API_KEY = '0d0cb7c0f9b84805b5e91472c3db9a96';
-export const Cards = ({ title, subtitle, img, id }: CardsProps) => {
-
+const API_KEY = '52047e52f4024a94a714868302478f54';
+export const Cards = ({ title, subtitle, img }: CardsProps) => {
+    //filter of ids and then create function for promise all
+    const data = useContext(AppContext)
+    // const ids = data.map(elem => elem.id);
+    // console.log(ids)
 
     const [isHover, setIsHover] = useState<Boolean>(false);
+    const [results, setResults] = useState<any | null>();
+    const getData = async (id: number) => {
+        const response = await axios.get(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${API_KEY}`);
+        return response.data;
+    };
+
+    const fetchData = async () => {
+        const infoRecipe = await Promise.all(data.map((obj: HoverProps) => getData(obj.id)));
+        setResults(infoRecipe);
+        console.log(results)
+    };
+
+    useEffect(() => {
+        fetchData();
+
+    }, []);
 
 
-    const data = useGetData(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${API_KEY}`)
-    console.log(data)
-
-
-      const handleMouseOver = () => {
+    const handleMouseOver = () => {
         setIsHover(true);
     };
     const handleMouseOut = () => {
@@ -49,6 +70,7 @@ export const Cards = ({ title, subtitle, img, id }: CardsProps) => {
 
                 {isHover ? (
                     <>
+
                         <div className={styles["card-detail--hover"]}>
                             <ul className={styles["card-list--hover"]}>
                                 <li className={styles["card-description--hover"]}>

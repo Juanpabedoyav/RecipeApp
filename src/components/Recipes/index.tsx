@@ -8,7 +8,7 @@ interface Recipe {
   title: string
   subtitle: string
   image: string
-  id?: string
+  
 }
 export const Recipes = () => {
   const data = useContext(AppContext)
@@ -21,7 +21,7 @@ export const Recipes = () => {
 
           data.length > 0 ? data.map((plate: Recipe) => {
             return (
-              <Cards title={plate.title.substring(0, 8)} subtitle={plate.title.substring(8, plate.title.length)} img={plate.image} id={plate.id}/>
+              <Cards title={plate.title.substring(0, 8)} subtitle={plate.title.substring(8, plate.title.length)} img={plate.image} />
 
             )
           })
