@@ -6,15 +6,20 @@ const useGetData = (API: string) => {
 
   useEffect(() => {
     async function fetchData(API: string) {
+      try {
+    
         const response = await axios({
           method: 'get',
           url: API,
         })
         setData(response.data.results);
+      } catch (error) {
+        console.log(error)
+      }
      
     }
     fetchData(API);
-  }, []);
+  }, [API]);
 
 
   return data

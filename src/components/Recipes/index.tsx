@@ -6,7 +6,7 @@ import axios from "axios";
 import { CardHover } from "components/CardHover";
 
 
-const API_KEY = 'bdf9815605054dda9c50ad9e7c02dab8';
+const API_KEY = '416646346e7c484e94ac76155d0542f4';
 
 interface CardProps {
   sourceName: string
@@ -47,13 +47,13 @@ export const Recipes = () => {
       <section className={styles['card-list']}>
         {
 
-              results?.length > 0 ? results.map((plate: CardProps) => {
+             results.map((plate: CardProps) => {
             return (
               <Cards key={plate.id} sourceName={plate.sourceName} dishTypes={plate.dishTypes[0]} image={plate.image}  children={<CardHover porcion={plate.servings} time={plate.readyInMinutes} level={'Díficil'} />}/>
 
             )
           })
-            : 'Loading ...'
+      
         }
       </section>
 
