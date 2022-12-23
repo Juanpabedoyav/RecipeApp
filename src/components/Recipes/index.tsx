@@ -11,6 +11,8 @@ const API_KEY = 'bdf9815605054dda9c50ad9e7c02dab8';
 interface CardProps {
   sourceName: string
   dishTypes:[] | string
+  readyInMinutes: number
+  servings:number
   image: string
   id?: number
 }
@@ -48,7 +50,7 @@ export const Recipes = () => {
 
               results?.length > 0 ? results.map((plate: CardProps) => {
             return (
-              <Cards key={plate.id} sourceName={plate.sourceName} dishTypes={plate.dishTypes[0]} image={plate.image}  children={<CardHover/>}/>
+              <Cards key={plate.id} sourceName={plate.sourceName} dishTypes={plate.dishTypes[0]} image={plate.image}  children={<CardHover porcion={plate.servings} time={plate.readyInMinutes} level={'Díficil'} />}/>
 
             )
           })

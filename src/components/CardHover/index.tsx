@@ -1,30 +1,39 @@
 import styles from "styles/Card.module.scss";
-import time from "assets/icons/ic_time.svg";
+import timeLogo from "assets/icons/ic_time.svg";
 import portion from "assets/icons/ic_portion.svg";
 import chef from "assets/icons/ic_chef.svg";
 
-interface CardHover{
-    
+interface CardHoverProps{
+    porcion: number
+    time: number
+    level: string
+
 }
-export const CardHover = ({}) => {
+export const CardHover = ({porcion , time , level}: CardHoverProps) => {
     return (
         <div className={styles["card-detail--hover"]}>
             <ul className={styles["card-list--hover"]}>
                 <li className={styles["card-description--hover"]}>
                     <img src={portion} alt="cantidad de porciones" />
                     <p className={styles["card--option"]}>Tamaño de la porción</p>
-                    <span>4 raciones</span>
+                    {
+                        porcion > 1 ?
+                        <span>{porcion} raciones</span>
+                        :
+                        <span>{porcion} racion</span>
+
+                    }
                 </li>
                 <li className={styles["card-description--hover"]}>
 
-                    <img src={time} alt="tiempo de preparacion" />
+                    <img src={timeLogo} alt="tiempo de preparacion" />
                     <p className={styles["card--option"]}> Tiempo de preparación</p>
-                    <span>10 minutos</span>
+                    <span>{time} Minutos</span>
                 </li>
                 <li className={styles["card-description--hover"]}>
                     <img src={chef} alt="" />
                     <p className={styles["card--option"]}> Dificultad</p>
-                    <span>fácil</span>
+                    <span>{level}</span>
                 </li>
             </ul>
         </div>
