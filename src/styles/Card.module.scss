@@ -39,23 +39,29 @@
       height: 332px;
       cursor: pointer;
     }
-
+ &:active {
+      height: 332px;
+      cursor: pointer;
+    }
     .card-detail {
       display: flex;
       flex-direction: column;
       margin: 0 auto;
       align-items: center;
       img {
+        border-radius: 90%;
         margin-top: -2.5rem;
         width: 110px;
         height: 106px;
       }
       p {
-        font-size: $--xl;
+        // font-size: $--xl;
         color: $--red;
         font-family: $--font-p;
         font-weight: 500;
-
+        padding: 0 1.3rem;
+        padding-top: 0.7rem;
+        text-align: center;
         small {
           font-family: $--font;
           font-size: $--xl;
