@@ -5,8 +5,11 @@ import ojingeo from 'assets/Ojingeo-muchim.png'
 import cherry from 'assets/cherry.png'
 
 import { Cards } from "components/Cards";
+import AppContext from "context/AppContext";
+import { useContext } from "react";
 
 export const Recipes = () => {
+  const data = useContext(AppContext)
   return (
     <>
        <h1 className={styles['recipes-title']}>Nuevas Recetas</h1>
