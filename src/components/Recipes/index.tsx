@@ -46,7 +46,7 @@ if(results?.length === 0) return <>Cargando...</>
         {
           results ? results.map((plate) => {
             return (
-              <Cards key={plate.id} sourceName={plate.sourceName} image={plate.image} dishTypes={plate.dishTypes} children={<CardHover porcion={plate.servings} time={plate.readyInMinutes} level={'Díficil'} />} />
+              <Cards key={plate.id} sourceName={plate.sourceName} image={plate.image} dishTypes={plate.dishTypes[0]} children={<CardHover porcion={plate.servings} time={plate.readyInMinutes} level={'Díficil'} />} />
             )
 
           })
