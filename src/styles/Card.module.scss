@@ -165,10 +165,16 @@
 
 
     .Card{
-      position: relative;
-      justify-content: normal;
-      width: 266px;
       height: 269px;
+      min-width: 266px;
+      &:hover {
+        width: 266px;
+        cursor: pointer;
+      }
+      &:active {
+        width: 266px;
+        cursor: pointer;
+      }
       .card-detail {
       
           p{
@@ -191,7 +197,6 @@
   }
   .card-detail--hover {
     .card-list--hover {
-      padding-top: 9px;
       padding-bottom: 19px;
       .card-description--hover {
         .card--option {
