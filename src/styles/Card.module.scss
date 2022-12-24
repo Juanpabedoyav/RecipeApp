@@ -9,7 +9,7 @@
 }
 .card-list {
   width: 92%;
-  height: 315px;
+  height: 327px;
   margin: 0 auto;
   padding: 2.4rem 0;
   padding-right: 1.5rem;
@@ -35,12 +35,15 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    position: relative;
     &:hover {
       height: 332px;
+      width: 180px;
       cursor: pointer;
     }
     &:active {
       height: 332px;
+      width: 180px;
       cursor: pointer;
     }
     .card-detail {
@@ -81,6 +84,9 @@
       flex-direction: row;
       justify-content: space-between;
       padding: 0.7rem;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
       .icons-start {
         display: flex;
         flex-direction: row;
