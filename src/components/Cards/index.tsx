@@ -46,7 +46,7 @@ export const Cards = ({ sourceName, image , dishTypes, children }: CardsProps) =
                         <>
                             <div className={styles["card-detail"]}>
                                 <p>
-                                    {sourceName} <small>{dishTypes}</small>
+                                    <strong>{sourceName}</strong> <small>{dishTypes}</small>
                                 </p>
                             </div>
                             <div className={styles.Icons}>

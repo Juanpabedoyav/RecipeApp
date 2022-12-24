@@ -6,7 +6,7 @@ import AppContext from "context/AppContext"
 
 const API_KEY : string | undefined = process.env.REACT_APP_API_KEY
 export const Home = () => {
-  const data = useGetData(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&number=8`)
+  const data = useGetData(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&number=12`)
 
   return (
     <>
