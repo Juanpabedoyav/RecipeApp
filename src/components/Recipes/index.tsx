@@ -6,55 +6,53 @@ import axios from "axios";
 import { CardHover } from "components/CardHover";
 
 
-const API_KEY = 'bdf9815605054dda9c50ad9e7c02dab8';
 
-interface CardProps {
+interface CardState {
   sourceName: string
-  dishTypes:[] | string
-  readyInMinutes: number
-  servings:number
+  dishTypes: [] | string
   image: string
+  readyInMinutes: number
+  servings: number
   id?: number
 }
-interface HoverProps {
-  sourceName: string
-  image: string
-  id:number
-}
+
+const API_KEY : string | undefined = process.env.REACT_APP_API_KEY
 
 export const Recipes = () => {
   const data = useContext(AppContext)
-  const [results, setResults] = useState<any | null >();
+  const [results, setResults] = useState<Array<CardState>>();
 
-  const getData = async (id: number) => {
-      const response = await axios.get(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${API_KEY}`);
-      return response.data;
-  };
-
-  const fetchInformationRecipe = async () => {
-      const infoRecipe = await Promise.all(data.map((obj: HoverProps) => getData(obj.id)));
-      setResults(infoRecipe);
-  };
 
   useEffect(() => {
-      fetchInformationRecipe();
+    const getData = async () => {
+      let allData = []
+      let ids = data.map((elem) => elem['id'])
+      for (let i = 0; i < ids.length; i++) {
+        const id = ids[i];
+        const response = await axios.get(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${API_KEY}`);
+        allData.push(response.data)
+      }
+      setResults(allData)
+    }
+    getData()
 
-  }, []);
-
+  }, [data]);
+if(results?.length === 0) return <>Cargando...</>
   return (
     <>
       <h1 className={styles['recipes-title']}>Nuevas Recetas</h1>
       <section className={styles['card-list']}>
+
         {
-
-              results?.length > 0 ? results.map((plate: CardProps) => {
+          results ? results.map((plate) => {
             return (
-              <Cards key={plate.id} sourceName={plate.sourceName} dishTypes={plate.dishTypes[0]} image={plate.image}  children={<CardHover porcion={plate.servings} time={plate.readyInMinutes} level={'Díficil'} />}/>
-
+              <Cards key={plate.id} sourceName={plate.sourceName} image={plate.image} dishTypes={plate.dishTypes[0]} children={<CardHover porcion={plate.servings} time={plate.readyInMinutes} level={'Díficil'} />} />
             )
+
           })
-            : 'Loading ...'
+          : 'Cargando...'
         }
+
       </section>
 
     </>

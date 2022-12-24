@@ -5,19 +5,18 @@ import { useState } from "react";
 
 interface CardsProps {
     sourceName: string
-    dishTypes:[] | string
+    dishTypes: [] | string
+    readyInMinutes?: number
+    servings?: number
     image: string
+    key?: number
     children: JSX.Element
 }
 
 
-export const Cards = ({ sourceName, image, dishTypes, children }: CardsProps) => {
-
-
+export const Cards = ({ sourceName, image , dishTypes, children }: CardsProps) => {
     const [isHover, setIsHover] = useState<Boolean>(false);
-
-
-
+ 
     const handleMouseOver = () => {
         setIsHover(true);
     };
@@ -26,7 +25,9 @@ export const Cards = ({ sourceName, image, dishTypes, children }: CardsProps) =>
     };
     return (
         <>
-            <div
+            
+
+                <div
                 className={styles.Card}
                 onMouseOver={handleMouseOver}
                 onMouseOut={handleMouseOut}
@@ -45,7 +46,7 @@ export const Cards = ({ sourceName, image, dishTypes, children }: CardsProps) =>
                         <>
                             <div className={styles["card-detail"]}>
                                 <p>
-                                    {sourceName} <small>{dishTypes}</small>
+                                    <strong>{sourceName}</strong> <small>{dishTypes}</small>
                                 </p>
                             </div>
                             <div className={styles.Icons}>
@@ -59,6 +60,8 @@ export const Cards = ({ sourceName, image, dishTypes, children }: CardsProps) =>
                     )
                 }
             </div>
+
+
         </>
     );
 };

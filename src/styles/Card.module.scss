@@ -9,7 +9,7 @@
 }
 .card-list {
   width: 92%;
-  height: 315px;
+  height: 327px;
   margin: 0 auto;
   padding: 2.4rem 0;
   padding-right: 1.5rem;
@@ -29,18 +29,21 @@
     height: 182px;
     width: 180px;
     background: transparent
-      linear-gradient(180deg, $--gray--light 0%, $--white 100%);
+    linear-gradient(180deg, $--gray--light 0%, $--white 100%);
     box-shadow: 0px 5px 9px $--black-light;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
+    position: relative;
     &:hover {
       height: 332px;
+      width: 180px;
       cursor: pointer;
     }
- &:active {
+    &:active {
       height: 332px;
+      width: 180px;
       cursor: pointer;
     }
     .card-detail {
@@ -48,20 +51,28 @@
       flex-direction: column;
       margin: 0 auto;
       align-items: center;
+
       img {
         border-radius: 90%;
         margin-top: -2.5rem;
         width: 110px;
         height: 106px;
+        object-fit: cover;
+        margin-bottom:  0.7rem;
       }
       p {
         // font-size: $--xl;
+        display: inline;
+        flex-direction: row;
         color: $--red;
         font-family: $--font-p;
         font-weight: 500;
-        padding: 0 1.3rem;
-        padding-top: 0.7rem;
+        padding: 0 1rem;
         text-align: center;
+
+        strong{
+          font-weight: 100;
+        }
         small {
           font-family: $--font;
           font-size: $--xl;
@@ -73,6 +84,9 @@
       flex-direction: row;
       justify-content: space-between;
       padding: 0.7rem;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
       .icons-start {
         display: flex;
         flex-direction: row;
@@ -151,10 +165,16 @@
 
 
     .Card{
-      position: relative;
-      justify-content: normal;
-      width: 266px;
       height: 269px;
+      min-width: 266px;
+      &:hover {
+        width: 266px;
+        cursor: pointer;
+      }
+      &:active {
+        width: 266px;
+        cursor: pointer;
+      }
       .card-detail {
       
           p{
@@ -162,6 +182,7 @@
           }
 
           img {
+          object-fit: cover;
           margin-top: -2.5rem;
           width: 166px;
           height: 157px;
@@ -176,7 +197,6 @@
   }
   .card-detail--hover {
     .card-list--hover {
-      padding-top: 9px;
       padding-bottom: 19px;
       .card-description--hover {
         .card--option {
@@ -191,9 +211,6 @@
           margin-top: -0.4rem;
         }
       }
-      // p:nth-child(2){
-      //     margin-top: -0.4rem;
-      // }
     }
   }
 }
