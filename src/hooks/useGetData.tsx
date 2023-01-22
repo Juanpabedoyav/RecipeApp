@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { useEffect, useState } from 'react'
+import axios from 'axios'
 
 const useGetData = (API: string) => {
-  const [data, setData] = useState<[]>([]);
+  const [data, setData] = useState<[]>([])
 
   useEffect(() => {
     async function fetchData(API: string) {
@@ -12,19 +12,19 @@ const useGetData = (API: string) => {
           method: 'get',
           url: API,
         })
-        setData(response.data.results);
+        setData(response.data.results)
       } catch (error) {
         console.log(error)
       }
 
     }
-    fetchData(API);
+    fetchData(API)
 
     return () => { }
-  }, [API]);
+  }, [API])
 
 
   return data
-};
+}
 
-export default useGetData;
+export default useGetData

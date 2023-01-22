@@ -1,8 +1,8 @@
-import { Banner } from "components/Banner"
-import { Categories } from "components/Categories"
-import { Recipes } from "components/Recipes"
-import useGetData from "hooks/useGetData"
-import AppContext from "context/AppContext"
+import { Banner } from 'components/Banner'
+import { Categories } from 'components/Categories'
+import { Recipes } from 'components/Recipes'
+import useGetData from 'hooks/useGetData'
+import AppContext from 'context/AppContext'
 
 const API_KEY : string | undefined = process.env.REACT_APP_API_KEY
 export const Home = () => {

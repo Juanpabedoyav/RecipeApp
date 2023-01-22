@@ -6,7 +6,8 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
-    'plugin:@typescript-eslint/recommended'
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react/jsx-runtime'
   ],
   overrides: [],
   parser: '@typescript-eslint/parser',
@@ -18,6 +19,7 @@ module.exports = {
   rules: {
     indent: ['error', 2],
     'linebreak-style': ['error', 'windows'],
+    'linebreak-style': 0,
     quotes: ['error', 'single'],
     semi: ['error', 'never']
   }

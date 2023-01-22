@@ -1,4 +1,4 @@
-import styles from "styles/Categories.module.scss";
+import styles from 'styles/Categories.module.scss'
 import vegetarian from 'assets/icons/ic_vegetarian.svg'
 import fastFood from 'assets/icons/ic_fast-food.svg'
 import kids from 'assets/icons/ic_kids.svg'
@@ -17,27 +17,27 @@ export const Categories = () => {
 
       <ul className={styles['list-categories']}>
         <li>
-          <img src={vegetarian} alt={""} />
+          <img src={vegetarian} alt={''} />
           <h4>Vegetarianos</h4>
         </li>
         <li>
-          <img src={main} alt={""} />
+          <img src={main} alt={''} />
           <h4>Principales</h4>
         </li>
         <li>
-          <img src={cake} alt={""} />
+          <img src={cake} alt={''} />
           <h4>Tortas</h4>
         </li>
         <li>
-          <img src={fastFood} alt={""} />
+          <img src={fastFood} alt={''} />
           <h4>Rápida</h4>
         </li>
         <li>
-          <img src={kids} alt={""} />
+          <img src={kids} alt={''} />
           <h4>Menú Niños</h4>
         </li>
         <li>
-          <img src={soup} alt={""} />
+          <img src={soup} alt={''} />
           <h4>Sopas</h4>
         </li>
 

@@ -1,5 +1,5 @@
-import styles from "styles/Banner.module.scss";
-import banner from "assets/bcq.jpg";
+import styles from 'styles/Banner.module.scss'
+import banner from 'assets/bcq.jpg'
 
 export const Banner = () => {
   return (
@@ -10,5 +10,5 @@ export const Banner = () => {
         <p>para todos</p>
       </div>
     </div>
-  );
-};
+  )
+}

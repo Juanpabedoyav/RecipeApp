@@ -1,7 +1,7 @@
 // import { Link } from 'react-router-dom'
-import styles from "styles/Header.module.scss";
-import homeLogo from "assets/icons/ic_home.svg";
-import logoCompany from "assets/logo.png";
+import styles from 'styles/Header.module.scss'
+import homeLogo from 'assets/icons/ic_home.svg'
+import logoCompany from 'assets/logo.png'
 
 export const Header = () => {
   return (
@@ -26,5 +26,5 @@ export const Header = () => {
         </a>
       </nav>
     </header>
-  );
-};
+  )
+}

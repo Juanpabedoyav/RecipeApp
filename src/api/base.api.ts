@@ -1,8 +1,8 @@
-import axios from "axios"
+import axios from 'axios'
 
-const BASE_URL = "https://api.spoonacular.com/recipes/"
+const BASE_URL = 'https://api.spoonacular.com/recipes/'
 
 export const instance = axios.create({
-    baseURL: BASE_URL,
+  baseURL: BASE_URL,
 
- })
+})
